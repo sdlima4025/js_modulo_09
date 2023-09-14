@@ -1,4 +1,5 @@
-// Intervalos (1/2)
+// MODULO 09 AULA 01 À 24 - Intervalos, Manipulações, Arrow, Ajax, etc
+// *Intervalos (1/2)
 // let timer;
 
 // function comecar() {
@@ -21,7 +22,7 @@
 //     document.querySelector('.demo').innerHTML = txt;
 // }
 
-//  Intervalos (2/2)
+//  *Intervalos (2/2)
 // let timer;
 // function rodar() {
 //   timer =  setTimeout(function() {
@@ -42,7 +43,7 @@
 
 // console.log(frase);
 
-// Descontruindo Objetos (1/2)(2/2)
+// *Descontruindo Objetos (1/2)(2/2)
 
 // let pessoa = {
 //   nome: "Sérgio",
@@ -72,7 +73,7 @@
 
 // console.log(pegarNomeCompleto(pessoa));
 
-// Desconstruindo Arrays
+// *Desconstruindo Arrays
 
 // let info = ['Sérgio Lima', 'Sérgio', 'Lima', '@sdlima'];
 
@@ -80,7 +81,7 @@
 
 // console.log( instagram);
 
-// Descontrução com uso de função | 3Setar um novo nome para os dados que virão do array e vão se tornar uma variável.
+// *Descontrução com uso de função | 3Setar um novo nome para os dados que virão do array e vão se tornar uma variável.
 // function criar() {
 //     return[1,2,3];
 // }
@@ -88,7 +89,7 @@
 
 // console.log(a,b,c);
 
-// Arrow Functions | função anonima === função arrow não usa o OO this.
+// *Arrow Functions | função anonima === função arrow não usa o OO this.
 /*function somar(x, y) {
     return x + y;
 }
@@ -119,7 +120,7 @@ let letrasNome = nome => nome.length;
 console.log(letrasNome('Sérgio'));
 */
 
-// Operador Spread(...nomeDaFuncao | array) funciona para (array end Objeto).
+// *Operador Spread(...nomeDaFuncao | array) funciona para (array end Objeto).
 /*
 let numeros = [...1,2,3,4];
 
@@ -153,7 +154,7 @@ function addInfo(info) {
 
 console.log(addInfo({nome:'Sérgio', sobrenome: 'Santana'}));
 
-// Operador Rest(pouco usado)
+// *Operador Rest(pouco usado)
 function adicionar(...numeros) {
     console.log(numeros);
 }
@@ -163,8 +164,8 @@ function adicionar(...nomes) {
     console.log(nomes);
 }
 adicionar('Sérgio', 'Silvio', 'Reinaldo');
-*/
-// Spread com Rest
+
+// *Spread com Rest
 function adicionar(nomes, ...novosNomes) {
     let novoConjunto = [
         ...nomes,
@@ -178,6 +179,54 @@ let nomes = ['Sérgio', 'Silvio'];
 let outrosNomes = adicionar(nomes, 'Reinaldo', 'Gilton', 'Luiz', 'João');
 
 console.log(outrosNomes);
+*/
 
-//Modulo: 09 - aula = 22 | Includes e Repeat
+//*Modulo: 09 - aula = 22 | Includes e Repeat == ecma Script-6
+/**
+ * INCLUDES verifica com retorno de true ou false
+let lista = ['ovo', 'café', 'arroz', 'feijão', 'macarrao'];
 
+    console.log(lista.includes('ovo'))
+    let nome = 'Bonieky';
+    console.log(nome.includes('B'));// case sensitive
+    let nome = 'Sérgio ';
+    console.log(nome.repeat(2))
+ */
+/**
+ * Objeto: Key, Values e Entries
+let lista = {
+    nome:'Sérgio',
+    idade: 53
+}
+// let lista = [1,2,3];
+
+console.log(typeof lista);
+let lista = ['ovo', 'café', 'arroz', 'feijão', 'macarrao'];
+
+// console.log(Object.keys(lista) );
+
+// console.log(Object.values(lista) );
+
+console.log(Object.entries(lista) );
+
+let pessoa = {
+    nome:'Sérgio',
+    sobreNome:'Santana',
+    idade:53
+};
+
+console.log(Object.keys(pessoa) );
+console.log(Object.values(pessoa) );
+console.log(Object.entries(pessoa) );
+ */
+
+/**
+ * String com padStart, padEnd
+ */
+let cartao = '1234123412341234';
+
+let lastDigits = cartao.slice(0,3);
+
+let cartaoMascarado = lastDigits.padEnd(16, '*') ; // QUANTIDADE DE CARACTERS, SIMBOLO
+
+console.log(`Este é seu cartão? ${cartaoMascarado}`);   
