@@ -222,7 +222,6 @@ console.log(Object.entries(pessoa) );
 
 /**
  * String com padStart, padEnd
- */
 let cartao = '1234123412341234';
 
 let lastDigits = cartao.slice(0,3);
@@ -230,3 +229,21 @@ let lastDigits = cartao.slice(0,3);
 let cartaoMascarado = lastDigits.padEnd(16, '*') ; // QUANTIDADE DE CARACTERS, SIMBOLO
 
 console.log(`Este é seu cartão? ${cartaoMascarado}`);   
+ */
+
+/**
+ * Thumbnails com JS
+function mostrar() {
+    let imagem = document.getElementById("imagem").files[0];
+
+    let img = document.createElement('img');
+    img.src = URL.createObjectURL(imagem);
+    img.width = 200;
+
+       document.getElementById('area').appendChild(img);// blob?
+}
+ */
+
+/**
+ * Thumbnails com FileReader
+ */
